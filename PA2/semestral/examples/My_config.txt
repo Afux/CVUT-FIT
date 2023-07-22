@@ -1,0 +1,3 @@
+path=/home/afu/PA1/df/TESTER
+widht=100
+height=30

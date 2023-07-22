@@ -1,0 +1,52 @@
+### PT - Zadani
+Tato semestrální práce patří do kategorie interaktivních aplikací. Vaším cílem je vytvořit aplikaci, kterou bude uživatel interaktivně ovládat (např. pomocí příkazů na standardním vstupu). Případné parametry aplikace se nesnažte definovat přímo v kódu (a to ani pomocí konstant). Umístěte je do konfiguračních souborů (jednoho nebo více), které váš program bude načítat.
+
+Vaším úkolem je vytvořit program na správu souborů a adresářů (podobně jako to dělá program Midnight Commander).
+
+Implementujte následující funkcionality:
+
+Umožněte pracovat se soubory: běžnými, adresáři i symbolickými linky.
+
+Základní operace: vytváření, kopírování, přesun, mazání.
+
+Předchozí operace (kromě vytváření) je potřeba umět i nad množinou souborů definovaných regulárním výrazem.
+
+Pokročilejší operace: spojování souborů (concat), vyhledávání souborů podle textu v nich obsaženého, deduplikace souborů (nalezení duplikátních souborů a nahrazení duplicit za symbolické linky).
+
+Vytvořte rozumné uživatelské rozhraní, které umožní alespoň zobrazení adresářů nad kterými se pracuje, vizuálně rozliší soubory, adresáře a symbolické linky a umožní navigaci mezi adresáři.
+
+V této úloze není možné implementovat jednotlivé operace využitím volání systémových příkazů, např. pomocí příkazu system (výjimku tvoří smazání obrazovky, př. system("clear")). Jednotlivé operace můžete implementovat nástroji standardní knihovny (př. std::filesystem). V případě, že vám nestačí, můžete využít systémové knihovny unistd.h, dirent.h, stat.h a další. Složitější operace je nutné implementovat manuálně.
+
+Kde lze využít polymorfismus? (doporučené)
+
+typy souborů: běžný, adresář, symbolický link, …
+
+typy operací: vytvoření, kopírování, přesun, mazání, …
+
+hledání duplikátních souborů: exaktní, s ignorování whitespaces, …
+
+uživatelské rozhraní: konzole, ncurses, SDL, OpenGL (různé varianty), …
+
+Další informace:
+
+https://midnight-commander.org/
+
+V této úloze si můžete vyhrát i s GUI a navrhnout zobrazení pro dva sloupce.
+
+### Doplneni Zadani
+Jako téma pro semestrální práci jsem si vybral aplikaci správce souborů.
+Aplikace bude mít podobné uživatelské rozhraní jako má již existující aplikace Midnight Commander.
+Veškerý interface bude implementován jako výpis v konzoli.
+Prohlížeč souboru bude rozdělen na dvě obrazovky, kdy každá bude pracovat samostatně (na každé se může zobrazovat jiná cesta).
+Uživatel uvidí jaká položka je momentálně vybraná. Uživatel bude moct provádět operace, které jsou součásti zadání.
+V dolní části terminálu bude menu bar, s operacemi a klávesami, kterými se operace provede.
+V menu baru bude i samotná položka menu, která se zobrazí jako dialogové okno a bude obsahovat složitější operace, jako například spojování, deduplikace, operace pomocí regexu.
+Po zvolení operace se uživateli zobrazí dialogové okno, které bude potvrzovací (Chcete provést tuto operaci ANO/NE). Pokud si uživatel vybral operaci, kde je zapotřebí vstup, např. pro regex, zobrazí se mu dialogové okno s možností zadat vstup.
+
+
+
+
+
+
+
+
