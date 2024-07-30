@@ -1,0 +1,3 @@
+/home/afu/KAB/PT3/cmake-build-debug/CMakeFiles/PT3.dir
+/home/afu/KAB/PT3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/afu/KAB/PT3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
